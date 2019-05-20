@@ -3,4 +3,6 @@ body {
     background-repeat: no-repeat;
     background-color: greenyellow;
     background-position: center;
+    object-fit: contain;
    }
+
