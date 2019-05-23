@@ -17,7 +17,7 @@ const getTeam = () => {
         //document.querySelector("#footTeam").innerHTML = data //this displays it in HTML
         // console.log(JSON.parse(data.squad));
 
-        findPlayers(data)
+        findPlayers(data);
 
     });
 }
@@ -26,10 +26,10 @@ const findPlayers = (data) => {
 
     // console.log(JSON.parse(data));
 
-    console.log(data.squad)
-    console.log(data.squad[1])
-    console.log(data.squad[0].name)
-    console.log(data.squad.length)
+    console.log(data.squad);
+    console.log(data.squad[1]);
+    // console.log(data.squad[0].name);
+    // console.log(data.squad.length);
 
     // console.log(data);
     // for loop here
@@ -41,12 +41,45 @@ const findPlayers = (data) => {
     // };
 
     for (let i = 0; i < data.squad.length; i++){
-        
-        console.log(data.squad[i].name)
+
+
+        let playerName = data.squad[1].name;
+        let playerShirt = data.squad[1].shirtNumber;
+        let playerRole = data.squad[1].role;
+        let playerPosition = data.squad[2].playerPosition;
+
+        // console.log(data.squad[i].name);
+        // console.log(data.squad[i].role);
+        // console.log(data.squad[i].shirtNumber);
+        document.getElementById("playerName").innerHTML = playerName;
+        document.getElementById("playerShirt").innerHTML = playerShirt;
+        document.getElementById("playerRole").innerHTML = playerRole;
+        document.getElementById("playerPosition").innerHTML = playerPosition;
+
+    
+
+
+    }
+
+}
+
+const fixUndef = (undefData) => {
+
+    let undef = undefData.document.getElementById("playerPosition").innerHTML = playerPosition;
+
+    if(undef === null) {
+
+        document.getElementById("playerPosition").style.display == "none";
+
+
+    } else {
+
+        document.getElementById("playerPosition").innerHTML = playerPosition;
     }
 
 }
 
 getTeam(); //function call
+fixUndef();
 
 
