@@ -27,7 +27,7 @@ const findPlayers = (data) => {
     // console.log(JSON.parse(data));
 
     console.log(data.squad);
-    console.log(data.squad[1]);
+    // console.log(data.squad[1]);
     // console.log(data.squad[0].name);
     // console.log(data.squad.length);
 
@@ -43,10 +43,10 @@ const findPlayers = (data) => {
     for (let i = 0; i < data.squad.length; i++){
 
 
-        let playerName = data.squad[1].name;
-        let playerShirt = data.squad[1].shirtNumber;
-        let playerRole = data.squad[1].role;
-        let playerPosition = data.squad[2].playerPosition;
+        let playerName = data.squad[29].name;
+        let playerShirt = data.squad[29].shirtNumber;
+        let playerRole = data.squad[29].role;
+        let playerPosition = data.squad[29].position;
 
         // console.log(data.squad[i].name);
         // console.log(data.squad[i].role);
@@ -63,9 +63,9 @@ const findPlayers = (data) => {
 
 }
 
-const fixUndef = (undefData) => {
+const fixUndef = () => {
 
-    let undef = undefData.document.getElementById("playerPosition").innerHTML = playerPosition;
+    let undef = document.getElementById("playerPosition").innerHTML = playerPosition;
 
     if(undef === null) {
 
