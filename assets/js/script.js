@@ -3,7 +3,7 @@ const options = {
     headers: {'X-Auth-Token': '972c6683e59747d18bbbdf01008cacb2'},
 }
 const getTeam = () => {
-    fetch('https://api.football-data.org/v2/teams/18', options)
+    fetch('https://api.football-data.org/v2/teams/5', options)
     .then(function(response) {
         return response.json();
     })
@@ -20,6 +20,7 @@ const findPlayers = (data) => {
     let threeMidfielders = [];
     let allAttackers = [];
     let threeAttackers = [];
+    console.log(data);
     squad.map(player => {
         let playerName = player.name
         let playerShirt = player.shirtNumber
