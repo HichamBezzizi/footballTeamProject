@@ -18,10 +18,7 @@ const getTeam = () => {
 
 const findPlayers = (data) => {
 
-    // console.log(data.squad);
-
     let squad = data.squad;
-
     let goalKeeper = [];
     let allDefenders = [];
     let fourDefenders = [];
@@ -30,7 +27,6 @@ const findPlayers = (data) => {
     let allAttackers = [];
     let threeAttackers = [];
 
-
     squad.map(player => {
 
         let playerName = player.name
@@ -38,13 +34,7 @@ const findPlayers = (data) => {
         let playerPosition = player.position
 
         if(playerPosition === "Goalkeeper") {
-
-            // console.log(player);
-
-            // let playerName = player.name
-            // let playerShirt = player.shirtNumber
-            // let playerPosition = player.position
-            
+ 
             goalKeeper.push({"name" : playerName, "shirt" : playerShirt, "position" : playerPosition });
             
         }
@@ -65,15 +55,11 @@ const findPlayers = (data) => {
         }
     })
 
-    // console.log(goalKeeper);
     let randomValue = goalKeeper[Math.floor(Math.random() * goalKeeper.length)];
-    // console.log(randomValue);
-    
+
     document.getElementById("playerName").innerHTML = randomValue.name;
     document.getElementById("playerShirt").innerHTML = randomValue.shirt;
     document.getElementById("playerPosition").innerHTML = randomValue.position;
-
-    // console.log(data.squad.length)
 
     for( let i = 0; i < data.squad.length; i++){
 
@@ -102,11 +88,8 @@ const findPlayers = (data) => {
 
                     threeMidfielders.push(randomMidfielder);
                 }
-                
             }
-
         }
-
         if(threeAttackers.name !== randomAttacker.name){
 
             if(randomAttacker.shirt !== null){
@@ -115,18 +98,9 @@ const findPlayers = (data) => {
 
                     threeAttackers.push(randomAttacker);
                 }
-                
             }
-
         }
-
-
-        
     }
-    // console.log(goalKeeper);
-    // console.log(fourDefenders);
-    // console.log(threeMidfielders);
-    // console.log(threeAttackers);
 
     fourDefenders.map(Defender => {
         
@@ -160,23 +134,6 @@ const findPlayers = (data) => {
         document.querySelector("#wrapper").appendChild(mapAttackers);
 
     })
-
-
-
-
-
-    // for (let i = 0; i < data.squad.length; i++){
-
-    //     let playerName = data.squad[29].name;
-    //     let playerShirt = data.squad[29].shirtNumber;
-    //     let playerRole = data.squad[29].role;
-    //     let playerPosition = data.squad[29].position;
-
-    //     // document.getElementById("playerName").innerHTML = playerName;
-    //     // document.getElementById("playerShirt").innerHTML = playerShirt;
-    //     // document.getElementById("playerPosition").innerHTML = playerPosition;
-    // }
-
 }
 
 const fixUndef = () => {
@@ -191,8 +148,6 @@ const fixUndef = () => {
     }
 }
 
-
-//function call
 getTeam(); 
 fixUndef();
 
