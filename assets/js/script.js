@@ -71,19 +71,19 @@ const findPlayers = (data) => {
         let mapDefenders = document.createElement("div");
         mapDefenders.setAttribute("class", "Defenders");
         mapDefenders.innerHTML = Defender.name+"</br>"+Defender.shirt+"</br>"+Defender.position
-        document.querySelector("#wrapper").appendChild(mapDefenders);
+        document.querySelector("#row1").appendChild(mapDefenders);
     })
     threeMidfielders.map(Midfielder => { 
         let mapMidfielders = document.createElement("div");
         mapMidfielders.setAttribute("class", "Midfielders");
         mapMidfielders.innerHTML = Midfielder.name+"</br>"+Midfielder.shirt+"</br>"+Midfielder.position   
-        document.querySelector("#wrapper").appendChild(mapMidfielders);
+        document.querySelector("#row2").appendChild(mapMidfielders);
     })
     threeAttackers.map(Attacker => {    
         let mapAttackers = document.createElement("div");
         mapAttackers.setAttribute("class", "Attackers");
         mapAttackers.innerHTML = Attacker.name+"</br>"+Attacker.shirt+"</br>"+Attacker.position    
-        document.querySelector("#wrapper").appendChild(mapAttackers);
+        document.querySelector("#row3").appendChild(mapAttackers);
     })
 }
 const fixUndef = () => {

@@ -1,8 +1,58 @@
 body {
-    background-image: url("/assets/img/footballfield.jpg");
-    background-repeat: no-repeat;
-    background-color: greenyellow;
+    background-image: url("/assets/img/CMfootballstadium.jpg");
     background-position: center;
-    object-fit: contain;
    }
+
+#wrapper{
+    color: white;
+    font-size: 1.7em;
+}
+
+#goalKeeper{
+    padding: 10px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    font-size: 1.7em;
+
+}
+
+.Defenders{
+
+    display: flex;
+    color: pink;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    margin: 5vh;
+}
+
+.Midfielders{
+    display: flex;
+    padding: 5px;
+    color: yellow;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    margin: 5vh;
+
+}
+
+.Attackers{
+    display: flex;
+    flex-flow : column-reverse;
+    padding: 5px;
+    color: red;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    margin: 5vh;
+}
+
+#row1, #row2, #row3{
+
+    display: flex;
+    margin: auto;
+    width: 1115px;
+    justify-content: center;
+
+}
+
 
