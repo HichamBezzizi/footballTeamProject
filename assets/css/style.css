@@ -9,8 +9,8 @@ body {
 }
 
 #goalKeeper{
-    padding: 10px;
-    color: white;
+    padding: 50px;
+    color: crimson;
     text-align: center;
     text-shadow: 2px 2px 5px black;
     font-size: 1.7em;
@@ -20,7 +20,7 @@ body {
 .Defenders{
 
     display: flex;
-    color: pink;
+    color: hotpink;
     text-align: center;
     text-shadow: 2px 2px 5px black;
     margin: 5vh;
@@ -40,7 +40,7 @@ body {
     display: flex;
     flex-flow : column-reverse;
     padding: 5px;
-    color: red;
+    color: white;
     text-align: center;
     text-shadow: 2px 2px 5px black;
     margin: 5vh;
